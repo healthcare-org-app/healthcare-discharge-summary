@@ -1,0 +1,12 @@
+name: discharge-summary-service
+port: 8311
+lang: python
+description: "discharge-summary-service \u2014 domain: ehr"
+http_deps:
+- ehr-service
+- clinical-notes-service
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- encounter.ended
